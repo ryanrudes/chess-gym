@@ -15,7 +15,7 @@ class ChessEnv(gym.Env):
     metadata = {'render.modes': ['rgb_array', 'human'], 'observation.modes': ['rgb_array', 'piece_map']}
 
     def __init__(self, render_size=512, observation_mode='rgb_array', claim_draw=True):
-        super(Chess, self).__init__()
+        super(ChessEnv, self).__init__()
 
         """
         from_square: 0-63
