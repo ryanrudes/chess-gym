@@ -30,7 +30,7 @@ while not terminal:
 env.close()
 ```
 
-## Taking steps
+## Further Info
 This environment will return 0 reward until the game has reached a terminal state. In the case of a draw, it will still return 0 reward. Otherwise, the reward will be either 1 or -1, depending upon the winning player.
 ```
 observation, reward, terminal, info = env.step(action)
