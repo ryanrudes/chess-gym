@@ -10,7 +10,7 @@ from io import BytesIO
 import cairosvg
 from PIL import Image
 
-class Chess(gym.Env):
+class ChessEnv(gym.Env):
     """Chess Environment"""
     metadata = {'render.modes': ['rgb_array', 'human'], 'observation.modes': ['rgb_array', 'piece_map']}
 
