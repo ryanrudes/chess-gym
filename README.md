@@ -14,6 +14,7 @@ Gym Chess is an environment for reinforcement learning with the OpenAI gym modul
 `python setup.py install`
 
 ## Example
+You can use the standard `Chess-v0` environment as so:
 ```python
 import gym
 import gym_chess
@@ -29,6 +30,8 @@ while not terminal:
   
 env.close()
 ```
+
+There is also an environment for the Chess960 variant; its identifier is `Chess960-v0`
 
 ## Further Info
 This environment will return 0 reward until the game has reached a terminal state. In the case of a draw, it will still return 0 reward. Otherwise, the reward will be either 1 or -1, depending upon the winning player.
