@@ -39,6 +39,10 @@ class ChessEnv(gym.Env):
 
         self.chess960 = kwargs['chess960']
         self.board = chess.Board(chess960 = self.chess960)
+
+        if self.chess960:
+            self.board.set_chess960_pos(np.random.randint(0, 960))
+
         self.render_size = render_size
         self.claim_draw = claim_draw
 
