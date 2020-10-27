@@ -20,9 +20,10 @@ import gym
 import gym_chess
 
 env = gym.make("Chess-v0")
+env.reset()
 
 terminal = False
-observation = env.reset()
+
 while not terminal:
   action = env.action_space.sample()
   observation, reward, terminal, info = env.step(action)
