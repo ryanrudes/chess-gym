@@ -10,6 +10,13 @@ from io import BytesIO
 import cairosvg
 from PIL import Image
 
+class MoveSpace:
+    def __init__(self, board):
+        self.board = board
+
+    def sample(self):
+        return np.random.choice(list(self.board.legal_moves))
+    
 class ChessEnv(gym.Env):
     """Chess Environment"""
     metadata = {'render.modes': ['rgb_array', 'human'], 'observation.modes': ['rgb_array', 'piece_map']}
