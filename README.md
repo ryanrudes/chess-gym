@@ -12,8 +12,7 @@ terminal = False
 observation = env.reset()
 while not terminal:
   action = env.action_space.sample()
-  move = env._action_to_move(action)
-  observation, reward, terminal, info = env.step(move)
+  observation, reward, terminal, info = env.step(action)
   env.render()
   
 env.close()
