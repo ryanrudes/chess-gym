@@ -13,7 +13,7 @@ Gym Chess is an environment for reinforcement learning with the OpenAI gym modul
 `cd gym-chess` \
 `python setup.py install` \
  \
- Or, you can use `pip`: \
+ Or, you can use `pip` (you may view the package [here](https://pypi.org/project/chess-gym/)): \
 `pip install chess-gym`
 
 ## Environments
