@@ -11,7 +11,10 @@ Gym Chess is an environment for reinforcement learning with the OpenAI gym modul
 2. Download and install `gym-chess`: \
 `git clone https://github.com/Ryan-Rudes/gym-chess.git` \
 `cd gym-chess` \
-`python setup.py install`
+`python setup.py install` \
+ \
+ Or, you can use `pip`: \
+`pip install chess-gym`
 
 ## Environments
 <a href="https://ibb.co/dgLW9rH"><img src="https://i.ibb.co/NSmVhsG/Screen-Shot-2020-10-27-at-3-08-46-PM-copy.png" alt="Screen-Shot-2020-10-27-at-3-08-46-PM-copy" border="0"></a>
