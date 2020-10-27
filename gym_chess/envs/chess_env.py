@@ -10,20 +10,19 @@ from io import BytesIO
 import cairosvg
 from PIL import Image
 
+class MoveSpace:
+    def __init__(self, board):
+        self.board = board
+
+    def sample(self):
+        return np.random.choice(list(self.board.legal_moves))
+
 class ChessEnv(gym.Env):
     """Chess Environment"""
     metadata = {'render.modes': ['rgb_array', 'human'], 'observation.modes': ['rgb_array', 'piece_map']}
 
     def __init__(self, render_size=512, observation_mode='rgb_array', claim_draw=True):
         super(ChessEnv, self).__init__()
-
-        """
-        from_square: 0-63
-        to_square: 0-63
-        promotion: 0-6
-        drop: 0-6
-        """
-        self.action_space = spaces.MultiDiscrete([64, 64, 7, 7])
 
         if observation_mode == 'rgb_array':
             self.observation_space = spaces.Box(low = 0, high = 255,
@@ -43,6 +42,8 @@ class ChessEnv(gym.Env):
         self.claim_draw = claim_draw
 
         self.viewer = None
+
+        self.action_space = MoveSpace(self.board)
 
     def _get_image(self):
         out = BytesIO()
