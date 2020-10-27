@@ -10,18 +10,11 @@ from io import BytesIO
 import cairosvg
 from PIL import Image
 
-class MoveSpace:
-    def __init__(self, board):
-        self.board = board
-
-    def sample(self):
-        return np.random.choice(list(self.board.legal_moves))
-
 class ChessEnv(gym.Env):
     """Chess Environment"""
     metadata = {'render.modes': ['rgb_array', 'human'], 'observation.modes': ['rgb_array', 'piece_map']}
 
-    def __init__(self, render_size=512, observation_mode='rgb_array', claim_draw=True):
+    def __init__(self, render_size=512, observation_mode='rgb_array', claim_draw=True, **kwargs):
         super(ChessEnv, self).__init__()
 
         if observation_mode == 'rgb_array':
@@ -37,7 +30,8 @@ class ChessEnv(gym.Env):
 
         self.observation_mode = observation_mode
 
-        self.board = chess.Board()
+        self.chess960 = kwargs['chess960']
+        self.board = chess.Board(chess960 = self.chess960)
         self.render_size = render_size
         self.claim_draw = claim_draw
 
