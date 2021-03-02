@@ -23,7 +23,7 @@ Gym Chess is an environment for reinforcement learning with the OpenAI gym modul
 You can use the standard `Chess-v0` environment as so:
 ```python
 import gym
-import chess_gym
+import gym_chess
 
 env = gym.make("Chess-v0")
 env.reset()
