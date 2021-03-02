@@ -14,7 +14,7 @@ Gym Chess is an environment for reinforcement learning with the OpenAI gym modul
 `python setup.py install` \
  \
  Or, you can use `pip` (you may view the package [here](https://pypi.org/project/chess-gym/)): \
-`pip install gym-chess`
+`pip install chess-gym`
 
 ## Environments
 <a href="https://ibb.co/dgLW9rH"><img src="https://i.ibb.co/NSmVhsG/Screen-Shot-2020-10-27-at-3-08-46-PM-copy.png" alt="Screen-Shot-2020-10-27-at-3-08-46-PM-copy" border="0"></a>
@@ -23,7 +23,7 @@ Gym Chess is an environment for reinforcement learning with the OpenAI gym modul
 You can use the standard `Chess-v0` environment as so:
 ```python
 import gym
-import gym_chess
+import chess_gym
 
 env = gym.make("Chess-v0")
 env.reset()
