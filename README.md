@@ -1,4 +1,11 @@
-# OpenAI Gym Chess
+# Chess `Gym`
+
+[![PyPI download month](https://img.shields.io/pypi/dm/chess-gym.svg)](https://pypi.python.org/pypi/chess-gym/)
+[![PyPI - Status](https://img.shields.io/pypi/status/chess-gym)](https://pypi.python.org/pypi/chess-gym/)
+[![PyPI](https://img.shields.io/pypi/v/chess-gym)](https://pypi.python.org/pypi/chess-gym/)
+[![GitHub](https://img.shields.io/github/license/Ryan-Rudes/chess-gym)](https://pypi.python.org/pypi/chess-gym/)
+
+
 Gym Chess is an environment for reinforcement learning with the OpenAI gym module.
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/Fw4fhzK/Screen-Shot-2020-10-27-at-2-30-21-PM.png" alt="Screen-Shot-2020-10-27-at-2-30-21-PM" border="0"></a>
